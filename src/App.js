@@ -4,7 +4,7 @@ import SearchParams from "./SearchParams";
 const App = () => {
 	return (
 		<div>
-			<h1 id="something-important">Adopt Me!</h1>
+			<h1>Adopt Me!</h1>
 			<SearchParams />
 		</div>
 	);
