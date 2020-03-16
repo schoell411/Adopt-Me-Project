@@ -23,7 +23,22 @@ class Details extends React.Component {
 		}, console.error);
 	}
 	render() {
-		return;
+		if (this.state.loading) {
+			return <h1>loading...</h1>;
+		}
+
+		const { animal, breed, location, description, name } = this.state;
+
+		return (
+			<div className="details">
+				<div>
+					<h1>{name}</h1>
+					<h2>{`${animal} - ${breed} - ${location}`}</h2>
+					<button>Adopt {name}</button>
+					<p>{description}</p>
+				</div>
+			</div>
+		);
 	}
 }
 
