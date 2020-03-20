@@ -16,6 +16,14 @@ class Carousel extends React.Component {
 		return { photos };
 	}
 
+	handleIndexClick = event => {
+		this.setState({
+			//we need 'active' to be a number
+			//putting the 'unary plus' before the 'event.target...' will turn it into a number
+			active: +event.target.dataset.index
+		});
+	};
+
 	render() {
 		const { photos, active } = this.state;
 
